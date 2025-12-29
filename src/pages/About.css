@@ -1,0 +1,154 @@
+.about-page {
+  width: 100%;
+  padding-bottom: 60px;
+  background: #fafafa;
+}
+
+/* HERO SECTION */
+.about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 90px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-hero h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.about-hero p {
+  font-size: 18px;
+  max-width: 720px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* CONTENT */
+.about-content {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.about-text h3 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: teal;
+}
+
+.about-text p {
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+.about-text ul {
+  padding-left: 22px;
+  margin-bottom: 18px;
+}
+
+.about-text ul li {
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 15px;
+  position: relative;
+}
+
+.about-text ul li::before {
+  content: "✔";
+  color: teal;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* IMAGE */
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .about-hero h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 60px 15px;
+  }
+
+  .about-hero h1 {
+    font-size: 28px;
+  }
+
+  .about-hero p {
+    font-size: 16px;
+  }
+
+  .about-text h2 {
+    font-size: 26px;
+  }
+}

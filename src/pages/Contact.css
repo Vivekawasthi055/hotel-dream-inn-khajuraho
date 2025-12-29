@@ -1,0 +1,184 @@
+.contact-page {
+  padding: 80px 8%;
+  background: #f9f9f9;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.contact-page h1 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.contact-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* LOGO */
+.contact-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.contact-logo img {
+  height: 200px;
+  width: auto;
+  border-radius: 15px;
+}
+
+/* LAYOUT */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* CONTACT INFO */
+.contact-info {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.contact-info:hover {
+  transform: translateY(-5px);
+}
+
+.contact-info h2 {
+  margin-bottom: 25px;
+  color: teal;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.contact-info a {
+  color: teal;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.instagram-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #dfaff5;
+  color: rgb(220, 205, 205);
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.instagram-btn:hover {
+  transform: scale(1.05);
+  color: #305fa0;
+  text-decoration: none;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  background: #f4f6f8;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h2 {
+  margin-bottom: 25px;
+  color: teal;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: teal;
+  outline: none;
+}
+
+.contact-form button {
+  background: teal;
+  color: white;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #00796b;
+  transform: scale(1.05);
+}
+
+/* MAP */
+.contact-map {
+  margin-top: 50px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+/* ================== Animations ================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-logo img {
+    height: 150px;
+  }
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .contact-page h1 {
+    font-size: 28px;
+  }
+}
